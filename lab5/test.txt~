@@ -1,0 +1,29 @@
+
+Schemes:
+A(a,b)
+B(a,b)
+C(a,b)
+D(a,b)
+E(a,b)
+F(a,b)
+G(a,b)
+H(a,b)
+
+Facts:
+Rules:
+A(a,b):-B(b,a)
+A(a,b):-E(a,b)
+B(a,b):-C(b,a)
+C(a,b):-D(b,a)
+D(a,b):-B(b,a)
+D(a,b):-C(b,a)
+E(a,b):-F(b,a)
+F(a,b):-G(a,b)
+G(a,b):-H(a,b)
+G(a,b):-F(b,a)
+H(a,b):-E(b,a)
+
+Queries:
+    E(a,b)?
+    B(a,b)?
+    A(a,b)?

@@ -1,0 +1,123 @@
+Dependency Graph
+  Q1: R7
+  Q2: R3
+  Q3: R1 R2
+  R1: R3
+  R10: R8
+  R11: R7
+  R2: R7
+  R3: R4
+  R4: R5 R6
+  R5: R3
+  R6: R4
+  R7: R8
+  R8: R10 R9
+  R9: R11
+
+E(a,b)?
+
+  Postorder Numbers
+    Q1: 6
+    R10: 1
+    R11: 2
+    R7: 5
+    R8: 4
+    R9: 3
+
+  Rule Evaluation Order
+    R10
+    R11
+    R9
+    R8
+    R7
+
+  Backward Edges
+    R10: R8
+    R11: R7
+
+  Rule Evaluation
+    G(a,b) :- F(b,a)
+    H(a,b) :- E(b,a)
+    G(a,b) :- H(a,b)
+    F(a,b) :- G(a,b)
+    E(a,b) :- F(b,a)
+
+E(a,b)? No
+
+B(a,b)?
+
+  Postorder Numbers
+    Q2: 5
+    R3: 4
+    R4: 3
+    R5: 1
+    R6: 2
+
+  Rule Evaluation Order
+    R5
+    R6
+    R4
+    R3
+
+  Backward Edges
+    R5: R3
+    R6: R4
+
+  Rule Evaluation
+    D(a,b) :- B(b,a)
+    D(a,b) :- C(b,a)
+    C(a,b) :- D(b,a)
+    B(a,b) :- C(b,a)
+
+B(a,b)? No
+
+A(a,b)?
+
+  Postorder Numbers
+    Q3: 12
+    R1: 5
+    R10: 6
+    R11: 7
+    R2: 11
+    R3: 4
+    R4: 3
+    R5: 1
+    R6: 2
+    R7: 10
+    R8: 9
+    R9: 8
+
+  Rule Evaluation Order
+    R5
+    R6
+    R4
+    R3
+    R1
+    R10
+    R11
+    R9
+    R8
+    R7
+    R2
+
+  Backward Edges
+    R10: R8
+    R11: R7
+    R5: R3
+    R6: R4
+
+  Rule Evaluation
+    D(a,b) :- B(b,a)
+    D(a,b) :- C(b,a)
+    C(a,b) :- D(b,a)
+    B(a,b) :- C(b,a)
+    A(a,b) :- B(b,a)
+    G(a,b) :- F(b,a)
+    H(a,b) :- E(b,a)
+    G(a,b) :- H(a,b)
+    F(a,b) :- G(a,b)
+    E(a,b) :- F(b,a)
+    A(a,b) :- E(a,b)
+
+A(a,b)? No
+

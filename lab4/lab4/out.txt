@@ -1,0 +1,15 @@
+Success!
+Schemes(3):
+  a(x,y)
+  b(x,y)
+  c(x)
+Facts(2):
+  a('a','a')
+  b('a','b')
+Rules(1):
+  c(x) :- a(x,y),b(x,y)
+Queries(1):
+  c(x)
+Domain(2):
+  'a'
+  'b'
